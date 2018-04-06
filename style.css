@@ -1,0 +1,86 @@
+body {
+    overflow:hidden;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+#contextMenu {
+  visibility: hidden;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: black;
+  padding: 5px;
+}
+
+#contextMenu a {
+  text-decoration: none;
+  display: inline;
+}
+
+#contextMenu li:hover {
+  background-color: #dedede
+}
+
+#contextMenu .inactive {
+  opacity: .3;
+  cursor: default !important;
+}
+
+#contextMenu .inactive:hover {
+  background-color: #f9f9f9;
+}
+
+#contextMenu ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#contextMenu li {
+  padding: 5px 0px;
+}
+
+.wrapper {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: #f9f9f9;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: black;
+  padding: 0px;
+}
+
+.arrowWrap {
+  text-align: right;
+  right: 100%;
+}
+
+#contextMenu ul li:hover>.wrapper {
+  display: block;
+}
+
+#innerMenu {
+  height: 100px;
+  overflow: hidden;
+}
+
+#scrollUp, #scrollDown {
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+#testarea {
+  margin: 0 auto;
+  width: 40%;
+  height: 450px;
+  background-color: #F5F5F5;
+  border: 1px solid #CDCECF;
+  border-radius: .5%;
+  padding: 6px;
+  text-align: center;
+}
