@@ -65,21 +65,22 @@ function hide() {
   innerMenu.style.height = "auto";
 }
 
-((() => {
+function submenuLineUp () {
   const submenuScope = document.getElementsByClassName("submenu");
   const submenuStyle = document.getElementsByClassName("wrapper");
 
-  function submenuLineUp(n) {
+  function submenuChangeTopPosition(n) {
     submenuScope[n].addEventListener("mouseover", () => {
       const itemTopPosition = submenuScope[n].offsetTop - innerMenu.scrollTop;
+
       submenuStyle[n].style.top = `${itemTopPosition}px`;
     });
   }
 
   for (let i = 0; i < submenuScope.length; i++) {
-    submenuLineUp(i);
+    submenuChangeTopPosition(i);
   }
-}))();
+}
 
 document.getElementById("testarea").addEventListener("click", eventArgs => {
   if (menu.style.visibility === "visible") {
@@ -87,6 +88,7 @@ document.getElementById("testarea").addEventListener("click", eventArgs => {
   } else {
     placeMenu(eventArgs);
     show();
+    submenuLineUp();
   }
 });
 
